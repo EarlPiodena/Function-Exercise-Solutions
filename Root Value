@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+string message(double num)
+{
+
+	cout << "The root value of " << num <<  " from 1 - 10 is: " << endl;
+	double y = 1;
+	do
+	{
+		cout << y << " root value for " << num << " is: ";
+		double x = 1 / y;
+		double r = pow(num, x);
+		cout << r << endl;
+		y++;
+	} while (y != 11);
+}
+
+int main()
+{
+	int num, fact = 1;
+
+	cout << "Enter a number you want the root value of: " << endl;
+	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid Input. Enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num;
+	}
+	cout << message(num) << endl;
+	return 0;
+}
