@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+
+int	myPower(int x)
+{
+	x *= 1;
+	return x;
+}
+
+int main()
+{
+	cout << "Input a Number to the power of 1-10: ";
+	int x;
+	cin >> x;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
+
+	cout << x << " to the power of 1 is " << pow(x, 1) << endl;
+	cout << x << " to the power of 2 is " << pow(x, 2) << endl;
+	cout << x << " to the power of 3 is " << pow(x, 3) << endl;
+	cout << x << " to the power of 4 is " << pow(x, 4) << endl;
+	cout << x << " to the power of 5 is " << pow(x, 5) << endl;
+	cout << x << " to the power of 6 is " << pow(x, 6) << endl;
+	cout << x << " to the power of 7 is " << pow(x, 7) << endl;
+	cout << x << " to the power of 8 is " << pow(x, 8) << endl;
+	cout << x << " to the power of 9 is " << pow(x, 9) << endl;
+	cout << x << " to the power of 10 is " << pow(x, 10) << endl;
+	return 0;
+}
